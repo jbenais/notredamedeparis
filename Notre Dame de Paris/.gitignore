@@ -1,0 +1,10 @@
+Temp/
+*.userprefs
+.DS_Store
+obj/*
+Library/
+*.bin
+*.log
+*db
+*.suo
+/*.sln*
