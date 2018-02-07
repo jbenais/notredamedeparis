@@ -8,3 +8,4 @@ Library/
 *db
 *.suo
 /*.sln*
+/Assembly-CSharp.csproj
