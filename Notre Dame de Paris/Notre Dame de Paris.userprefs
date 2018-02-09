@@ -1,8 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlateformBehavior.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="40" Column="51" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GargoyleBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerDeath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\KeyAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerTriggers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManaging.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlateformBehavior.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -51,8 +51,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Characters\Player\Script\ScreenShot.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Demo\MouseLook.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Demo\PlayerMovement.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Scripts\ConditionalHideAttribute.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Scripts\Detection.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Scripts\Door.cs" />
+     <Compile Include="Assets\Ressources\Doors\Alex&apos;s Door System Lite\Scripts\RotationTools.cs" />
+     <Compile Include="Assets\Scripts\CameraBehavior.cs" />
+     <Compile Include="Assets\Scripts\GameManaging.cs" />
+     <Compile Include="Assets\Scripts\GargoyleBehavior.cs" />
+     <Compile Include="Assets\Scripts\KeyAnimation.cs" />
+     <Compile Include="Assets\Scripts\PlateformBehavior.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
+     <Compile Include="Assets\Scripts\PlayerTriggers.cs" />
+     <None Include="Assets\Ressources\Modular Backdrop Builds\Discription.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
