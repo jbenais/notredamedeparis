@@ -8,4 +8,11 @@ public class ParticlesCollision : MonoBehaviour {
 			other.gameObject.GetComponent<Player3DController> ().die ();
 		}
 	}
+
+	void Update() {
+		if (!gameObject.GetComponent<ParticleSystem> ().isPlaying) {
+			gameObject.GetComponent<ParticleSystem> ().Play ();
+		}
+
+	}
 }

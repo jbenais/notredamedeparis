@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class ParticlesController : MonoBehaviour {
 	// Use this for initialization
-	float timer;
-	bool play = true;
+	public float timer;
+	private bool play = true;
 
 	void Start () {
-		timer = 0f;
 	}
 	// Update is called once per frame
 	void Update () {
 		if (timer >= 5f) {
 			if (play) {
 				gameObject.GetComponent<ParticleSystem>().Play();
+				gameObject.GetComponent<CapsuleCollider> ().enabled = true;
 			} else {
 				gameObject.GetComponent<ParticleSystem>().Stop();
+				gameObject.GetComponent<CapsuleCollider> ().enabled = false;
 			}
 			play = !play;
 			timer = 0;

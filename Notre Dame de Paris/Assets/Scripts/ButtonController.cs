@@ -9,24 +9,25 @@ public class ButtonController : MonoBehaviour {
 	private bool begin = false;
 	// Use this for initialization
 	void Start () {
-		
+		flames.GetComponent<ParticleSystem> ().Play ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (timer >= 5f) {
-			if (begin) {
-				flames.GetComponent<ParticleSystem> ().Stop ();
-			} else {
-				flames.GetComponent<ParticleSystem> ().Play ();
-			}
+		if (begin && timer >= 15f) {
+			timer += Time.deltaTime;
+			flames.GetComponent<ParticleSystem> ().Stop ();
+			//flames.GetComponent<BoxCollider> ().enabled = false;
+		} else {
+			begin = !begin;
 			timer = 0f;
+			flames.GetComponent<ParticleSystem> ().Play ();
+			//flames.GetComponent<BoxCollider> ().enabled = true;
 		}
-		begin = !begin;
-		timer += Time.deltaTime;
 	}
 
 	void OnTriggerEnter (Collider other) {
 		begin = other.gameObject.tag == "Player";
+		Debug.Log ("ok il a touché");
 	}
 }
