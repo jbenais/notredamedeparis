@@ -14,13 +14,14 @@ public class Player3DController : MonoBehaviour {
 	public StartMenu startMenu;
 	private CharacterController controller;
 	private bool endGame = false;
-
+	private Animator anim;
 
 	void Start() {
 		speed = 30f;
-		jumpForce = 12f;
+		jumpForce = 8f;
 		gravity = 30f;
 		controller = gameObject.GetComponent<CharacterController> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	void Update() {
@@ -28,12 +29,13 @@ public class Player3DController : MonoBehaviour {
 			startMenu.StopMenu ();
 		}
 
-		if (timer.getTime () >= 60f) {
+		if (timer.getTime () <= 0f) {
 			controller.enabled = false;
 			deathMenu.lost ();
 		} else if (!endGame) { 
 			if (controller.isGrounded) {
 				moveDir = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+				anim.SetFloat ("Speed", Input.GetAxis ("Horizontal") + Input.GetAxis("Vertical"));
 				moveDir = transform.TransformDirection (moveDir);
 				moveDir *= speed;
 
@@ -43,7 +45,7 @@ public class Player3DController : MonoBehaviour {
 			}
 			moveDir.y -= gravity * Time.deltaTime;
 			controller.Move (moveDir * Time.deltaTime);
-			if (transform.position.y <= 20f) {
+			if (transform.position.y <= 15f) {
 				die ();
 			}
 		}

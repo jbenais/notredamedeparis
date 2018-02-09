@@ -12,6 +12,7 @@ public class ParticlesController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (timer >= 5f) {
+			play = !play;
 			if (play) {
 				gameObject.GetComponent<ParticleSystem>().Play();
 				gameObject.GetComponent<CapsuleCollider> ().enabled = true;
@@ -19,7 +20,6 @@ public class ParticlesController : MonoBehaviour {
 				gameObject.GetComponent<ParticleSystem>().Stop();
 				gameObject.GetComponent<CapsuleCollider> ().enabled = false;
 			}
-			play = !play;
 			timer = 0;
 		}
 		timer += Time.deltaTime;
