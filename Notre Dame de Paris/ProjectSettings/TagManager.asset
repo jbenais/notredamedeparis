@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ennemy
   - Key
   - Door
+=======
+  - Goal
+>>>>>>> fbe913fbcdbbf540288340e75c81746a845edce1
   layers:
   - Default
   - TransparentFX
