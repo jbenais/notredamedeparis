@@ -17,7 +17,7 @@ public class Timer : MonoBehaviour {
 		if (time > 60f) {
 			gameObject.SetActive (false);
 		}
-		text.text = "00:" + (time < 10 ? "0" : "") + time;
+		text.text = "00:" + time.ToString("00");
 		time -= Time.deltaTime;
 	}
 

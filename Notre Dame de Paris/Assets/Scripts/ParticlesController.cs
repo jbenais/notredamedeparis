@@ -10,18 +10,17 @@ public class ParticlesController : MonoBehaviour {
 	void Start () {
 		timer = 0f;
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		if (timer >= 5f) {
 			if (play) {
-				this.gameObject.GetComponent<ParticleSystem> ().Stop ();
+				gameObject.GetComponent<ParticleSystem>().Play();
 			} else {
-				this.gameObject.GetComponent<ParticleSystem> ().Play ();
+				gameObject.GetComponent<ParticleSystem>().Stop();
 			}
-			timer = 0f;
+			play = !play;
+			timer = 0;
 		}
-		play = !play;
 		timer += Time.deltaTime;
 	}
 

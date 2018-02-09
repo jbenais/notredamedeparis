@@ -495,6 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ca5c045a8684293b067fc9537c34b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1653059903}
   resultText: {fileID: 443234431}
 --- !u!1 &392005908
 GameObject:
@@ -802,7 +803,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -436604429
+  randomSeed: 1178087004
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5279,7 +5280,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: df0777a2e75ec7048b28e7c394efbd53, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: df0777a2e75ec7048b28e7c394efbd53, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5287,7 +5288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: df0777a2e75ec7048b28e7c394efbd53, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 185.2
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: df0777a2e75ec7048b28e7c394efbd53, type: 3}
       propertyPath: m_LocalRotation.x

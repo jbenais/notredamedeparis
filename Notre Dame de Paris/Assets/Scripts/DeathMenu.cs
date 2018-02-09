@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class DeathMenu : MonoBehaviour {
 
+	public GameObject player;
 	public Text resultText;
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class DeathMenu : MonoBehaviour {
 
 	public void ToggleEndMenu() {
 		gameObject.SetActive(true);
+		player.GetComponent<CharacterController> ().enabled = false;
 	}
 
 	public void Restart() {
