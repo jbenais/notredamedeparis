@@ -1,34 +1,57 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player3DController : MonoBehaviour {
 
-	public GameObject Camera;
 	public float speed;
-	public float jumpForce;
+	private float jumpForce;
+	private float gravity;
+	private Vector3 moveDir = Vector3.zero;
+	public Timer timer;
+	public DeathMenu deathMenu;
+	public StartMenu startMenu;
 
 	void Start() {
 		speed = 30f;
-		jumpForce = 10f;
+		jumpForce = 12f;
+		gravity = 30f;
 	}
 
 	void Update() {
-		if (Input.GetKey (KeyCode.UpArrow) || (Input.GetKey (KeyCode.Z))) {
-			transform.Translate ((-Camera.transform.forward) * speed * Time.deltaTime);
-		} 
-		if (Input.GetKey (KeyCode.DownArrow) || (Input.GetKey (KeyCode.S))) {
-			transform.Translate ((Camera.transform.forward) * speed * Time.deltaTime);
+		if (Time.timeSinceLevelLoad >= 6f) {
+			startMenu.StopMenu ();
 		}
-		if (Input.GetKey (KeyCode.LeftArrow) || (Input.GetKey (KeyCode.Q))) {
-			transform.Translate((Camera.transform.right) * speed * Time.deltaTime);
+
+		if (timer.getTime() >= 60f) {
+			deathMenu.lost ();
 		}
-		if (Input.GetKey (KeyCode.RightArrow) || (Input.GetKey (KeyCode.D))) {
-			transform.Translate((-Camera.transform.right) * speed * Time.deltaTime);
+
+		CharacterController controller = gameObject.GetComponent<CharacterController> ();
+		if (controller.isGrounded) {
+			moveDir = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
+			moveDir = transform.TransformDirection (moveDir);
+			moveDir *= speed;
+
+			if (Input.GetButtonDown ("Jump")) {
+				moveDir.y = jumpForce;
+			}
 		}
-		if (Input.GetKey (KeyCode.Space)) {
-			transform.Translate (Vector3.up * 3);
-			//GetComponent<Rigidbody> ().velocity = new Vector3 (0, jumpForce, 0);
+		moveDir.y -= gravity * Time.deltaTime;
+		controller.Move (moveDir * Time.deltaTime);
+		if (transform.position.y <= 20f) {
+			die ();
 		}
+	}
+
+	void OnTriggerEnter (Collider other) {
+		if (other.gameObject.tag == "Goal") {
+				deathMenu.win ();
+		}
+	}
+
+	public void die() {
+		deathMenu.dead ();
 	}
 }
