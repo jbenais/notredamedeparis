@@ -31,6 +31,7 @@ public class Player3DController : MonoBehaviour {
 	}
 
 	void Update() {
+		timer.gameObject.SetActive (!endGame);
 		nbKeys.text = keys + " / " + "3";
 		if (timer.getTime() <= 0f) {
 			endGame = true;

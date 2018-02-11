@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
-	public GameObject player;
 	private float time = 180f;
 	public Text remainingTime;
 	// Use this for initialization
