@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - Door
+  - Ennemy
+  - Key
+  - GameManager
+  - PressurePlate
   layers:
   - Default
   - TransparentFX
