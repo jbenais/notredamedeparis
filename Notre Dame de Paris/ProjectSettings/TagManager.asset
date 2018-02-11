@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Goal
+  - Key
+  - Ladder
+  - Door
   layers:
   - Default
   - TransparentFX

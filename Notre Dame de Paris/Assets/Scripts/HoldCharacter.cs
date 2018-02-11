@@ -9,7 +9,6 @@ public class HoldCharacter : MonoBehaviour {
 		lastPosition = transform.position;
 	}
 	private void OnTriggerEnter(Collider other) {
-		Debug.Log (other.gameObject.name);
 		player = other.gameObject;
 	}
 
