@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
-
-	private float time = 60f;
-	public Text text;
+	private float time = 180f;
+	public Text remainingTime;
 	// Use this for initialization
 	void Start () {
 		gameObject.SetActive (true);
@@ -14,10 +13,13 @@ public class Timer : MonoBehaviour {
 		
 	// Update is called once per frame
 	void Update () {
-		if (time > 60f) {
+		if (time <= 0f) {
 			gameObject.SetActive (false);
+			return;
 		}
-		text.text = "00:" + time.ToString("00");
+		int min = (int)(time / 60f);
+		int sec = (int)(time % 60f);
+		remainingTime.text = min.ToString("00") + ":" + sec.ToString("00");
 		time -= Time.deltaTime;
 	}
 

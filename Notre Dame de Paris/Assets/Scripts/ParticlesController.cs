@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticlesController : MonoBehaviour {
 	// Use this for initialization
-	public float timer;
+	private float timer;
 	private bool play = true;
 
 	void Start () {

@@ -6,16 +6,14 @@ using UnityEngine.UI;
 
 public class DeathMenu : MonoBehaviour {
 
-	public GameObject player;
 	public Text resultText;
 	// Use this for initialization
 	void Start () {
-		gameObject.SetActive(false);
+		  gameObject.SetActive(false);
 	}
 
 	public void ToggleEndMenu() {
 		gameObject.SetActive(true);
-		player.GetComponent<CharacterController> ().enabled = false;
 	}
 
 	public void Restart() {
@@ -38,7 +36,7 @@ public class DeathMenu : MonoBehaviour {
 	}
 
 	public void lost() {
-		resultText.text = "THE PRINCESS IS DEAD !!";
+		resultText.text = "ESMERALDA DIED";
 		ToggleEndMenu ();
 	}
 }

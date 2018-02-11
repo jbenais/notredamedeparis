@@ -1,0 +1,28 @@
+================ NOTRE DAME DE PARIS ================
+
+Level 0: 
+
+Ce premier niveau est en 2D. Le joueur doit atteindre
+la porte de sortie pour accéder au niveau suivant.
+
+Changements depuis vendredi :
+    - Ajout de pièges
+    - Optimisation des mouvements
+    - Correction de bugs
+
+Level 1:
+
+Ce deuxième niveau est lui en 3D. Le joueur ne peut
+se déplacer que de manière horizontale mais peut sauter
+pour s'élever (ex: escaliers). 
+Le joueur doit trouver toutes les clés qui pourra ouvrir
+la porte où Esmeralda est tenue prisonnière. Il devra
+faire attention aux obstacles disposés à certains endroits
+de la map. Attention, le joueur n'a que 3 minutes pour
+atteindre l'objectif.
+
+Changement depuis vendredi :
+    - Nouveau level design
+    - Nouvelle quête : clés, pièges, obstacles...
+    - Menu de victoire / perte
+    - Ajout d'animations
