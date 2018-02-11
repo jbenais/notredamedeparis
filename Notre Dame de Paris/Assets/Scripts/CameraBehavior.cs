@@ -16,6 +16,10 @@ public class CameraBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		checkFloor ();
+	}
+
+	void checkFloor() {
 		if (playerPos.position.y > 8.8f && transform.position.y < floorTwo.y - 0.5f) {
 			transform.position = Vector3.SmoothDamp (transform.position, floorTwo, ref velocity, 1f);
 		}
@@ -23,3 +27,5 @@ public class CameraBehavior : MonoBehaviour {
 			transform.position = Vector3.SmoothDamp (transform.position, floorOne, ref velocity, 1f);
 	}
 }
+
+
